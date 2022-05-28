@@ -43,7 +43,7 @@ class Post(models.Model):
         related_name='posts',
         verbose_name='Автор поста',
         help_text='Данный пользователь написал пост'
-        )
+    )
     group = models.ForeignKey(
         Group,
         blank=True,

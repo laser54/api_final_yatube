@@ -17,6 +17,9 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = serializers.GroupSerializer
     permission_classes = (IsAuthorOrReadOnly,)
+# не очень понял в чем замечание.
+# Без permission или с ModelViewSet не проходят тесты
+# Написал в slack
 
 
 class PostViewSet(viewsets.ModelViewSet):
